@@ -1,38 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>particles.js</title>
-  <meta name="description" content="particles.js Demo">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <title>particles.js demo</title>
   <style>
     html, body {
       margin: 0;
       padding: 0;
       height: 100%;
-      background-color: #000;
+      background: #000;
     }
     #particles-js {
       width: 100%;
       height: 100%;
       position: absolute;
-      top: 0;
-      left: 0;
+      z-index: -1;
     }
   </style>
 </head>
 <body>
 
-<!-- Particles container -->
 <div id="particles-js"></div>
 
-<!-- Scripts -->
+<!-- Particles.js library -->
 <script src="particles.min.js"></script>
-<script>
-  particlesJS.load('particles-js', 'particles.json', function() {
-    console.log('particles.js config loaded');
-  });
-</script>
 
-</body>
-</html>
+<!-- Load particles config -->
+<script>
+  particlesJS('particles-js', {
+    particles: {
+      number: { value: 60 },
+      color: { value: "#ffffff" },
+      shape: { type: "circle" },
+      opacity: { value: 0.5 },
+      size:
